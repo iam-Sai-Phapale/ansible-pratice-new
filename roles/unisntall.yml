@@ -6,6 +6,6 @@
   tasks:
 
     - name: Uninstall Package
-      package:
+      apt:
         name: nginx  # Change to the package you want to uninstall
         state: absent
