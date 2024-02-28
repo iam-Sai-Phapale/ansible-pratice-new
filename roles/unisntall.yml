@@ -1,0 +1,11 @@
+---
+- name: Uninstall Package
+  hosts: all
+  become: true  # Run tasks with elevated privileges (sudo)
+
+  tasks:
+
+    - name: Uninstall Package
+      package:
+        name: nginx  # Change to the package you want to uninstall
+        state: absent
