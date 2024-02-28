@@ -1,0 +1,16 @@
+--- 
+- name : MY global variable
+  hosts : all 
+  vars:
+      URL: www.gloabl.com
+  tasks:
+    - name: gloabal variable
+      debug:
+        msg: "{{URL}}"
+
+    - name: local variable
+      debug:
+        msg: "{{URL}}"
+      vars:
+        URL: www.local.com
+...
